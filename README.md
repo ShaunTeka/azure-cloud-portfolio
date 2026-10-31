@@ -1,2 +1,6 @@
-# azure-cloud-security-portfolio
-Hands-on Azure cloud, security, and infrastructure projects built in the live Azure Portal. Showcasing practical skills in networking, identity, monitoring, governance, and security operations.
+☁️ Azure Cloud Portfolio
+Welcome to my Azure Cloud Portfolio.
+
+This repository documents my hands-on experience with Microsoft Azure, focusing on Cloud Infrastructure, Security Operations, Identity Management, Networking, Monitoring, and Governance.
+
+All projects are built and tested using the live Azure Portal and are designed to simulate real-world cloud and cybersecurity scenarios.
