@@ -1,6 +1,6 @@
 # 🖥️ Azure Virtual Machine Deployment Lab
 
-> A hands-on Microsoft Azure project demonstrating how I deployed, accessed, managed, stopped, and removed a Windows Server 2025 Virtual Machine using the Azure Portal.
+A hands-on Microsoft Azure project demonstrating how I deployed, accessed, managed, stopped, and removed a Windows Server 2025 Virtual Machine using the Azure Portal.
 
 ---
 
