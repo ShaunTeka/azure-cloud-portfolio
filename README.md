@@ -1,5 +1,8 @@
 ☁️ Azure Cloud Portfolio
 
-This repository documents my hands-on experience with Microsoft Azure, focusing on Cloud Infrastructure, Security Operations, Identity Management, Networking, Monitoring, and Governance.
+Overview
+This repository documents my hands-on learning and practical experience with Microsoft Azure.
 
-All projects are built and tested using the live Azure Portal and are designed to simulate real-world cloud and cybersecurity scenarios.
+The portfolio focuses on building, configuring, securing, and managing cloud resources using real Azure environments. Each project documents the implementation process, architecture, configuration decisions, screenshots, challenges encountered, and lessons learned.
+
+The goal of this portfolio is to demonstrate practical Azure skills across cloud infrastructure, networking, identity, security, monitoring, storage, and governance.
