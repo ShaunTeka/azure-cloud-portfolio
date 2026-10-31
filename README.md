@@ -1,5 +1,4 @@
 ☁️ Azure Cloud Portfolio
-Welcome to my Azure Cloud Portfolio.
 
 This repository documents my hands-on experience with Microsoft Azure, focusing on Cloud Infrastructure, Security Operations, Identity Management, Networking, Monitoring, and Governance.
 
