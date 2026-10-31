@@ -117,7 +117,8 @@ This project will focus on:
 
 #### 📁 Project Documentation
 
-./azure-monitoring-lab/
+[View Azure Monitoring Lab](./azure-monitoring-lab/)
+
 
 ---
 
@@ -151,4 +152,5 @@ This project will focus on:
 
 #### 📁 Project Documentation
 
-./azure-governance-lab/
+[View Azure Governance Lab](./azure-governance-lab/)
+
