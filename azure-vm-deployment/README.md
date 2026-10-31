@@ -249,8 +249,6 @@ I copied the public IP address so that I could connect to the Windows Server rem
 
 > **Figure 10:** Azure VM Overview page showing the deployed Virtual Machine and its network information.
 
-> 🔒 **Security notice:** Blur or hide the public IP address before publishing this image in a public GitHub repository.
-
 ---
 
 ## 11. Open the Run Dialog
