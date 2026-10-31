@@ -23,6 +23,4 @@ Screenshots and step-by-step implementation details will be added as the lab pro
 
 🟡 **In Progress**
 
-## 🔙 Navigation
 
-[⬅️ Back to Azure Cloud Portfolio](../README.md)
