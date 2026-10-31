@@ -1,8 +1,71 @@
-☁️ Azure Cloud Portfolio
+# ☁️ Azure Cloud Portfolio
 
-Overview
-This repository documents my hands-on learning and practical experience with Microsoft Azure.
+> **Building practical Microsoft Azure skills through hands-on cloud projects.**
 
-The portfolio focuses on building, configuring, securing, and managing cloud resources using real Azure environments. Each project documents the implementation process, architecture, configuration decisions, screenshots, challenges encountered, and lessons learned.
+Welcome to my **Azure Cloud Portfolio**. This repository documents my hands-on experience with Microsoft Azure, focusing on cloud infrastructure, networking, identity, security, storage, monitoring, governance, and automation.
 
-The goal of this portfolio is to demonstrate practical Azure skills across cloud infrastructure, networking, identity, security, monitoring, storage, and governance.
+Each project demonstrates practical implementation using the Azure Portal and documents the configuration, challenges, security considerations, and lessons learned.
+
+---
+
+## 🚀 Projects
+
+### 🖥️ 01. Azure Virtual Machine Deployment
+
+> Deploying and configuring a virtual machine in Microsoft Azure.
+
+**Status:** 🟡 `In Progress`
+
+**Technologies**
+
+`Azure Virtual Machines` `Resource Groups` `Virtual Network` `Subnet` `Network Security Groups` `Public IP` `Managed Disks`
+
+#### 🎯 Objective
+
+Deploy and configure an Azure Virtual Machine while developing practical knowledge of the core Azure infrastructure required to host workloads in the cloud.
+
+#### 📁 Project Documentation
+
+[View Azure VM Deployment Lab](./azure-vm-deployment-lab/)
+
+---
+
+### 🌐 02. Azure Networking Lab
+
+> Building and configuring network infrastructure in Microsoft Azure.
+
+**Status:** ⚪ `Planned`
+
+**Technologies**
+
+`Virtual Network` `Subnets` `Network Security Groups` `Public IP` `Network Interfaces`
+
+#### 🎯 Objective
+
+Develop practical experience configuring Azure networking components and understanding how Azure resources communicate securely across virtual networks.
+
+---
+
+### 💾 03. Azure Storage Lab
+
+> Exploring cloud storage and data management in Microsoft Azure.
+
+**Status:** ⚪ `Planned`
+
+**Technologies**
+
+`Storage Accounts` `Blob Storage` `Containers` `Access Control`
+
+#### 🎯 Objective
+
+Develop hands-on experience creating and managing Azure Storage resources.
+
+---
+
+### 🔐 04. Microsoft Entra ID & RBAC Lab
+
+> Exploring identity, permissions, and access management within Microsoft Azure.
+
+**Status:** ⚪ `Planned`
+
+**Technologies**
