@@ -459,22 +459,6 @@ The **Delete** option should only be selected after confirming that the Virtual 
 
 ---
 
-# 🔐 Security Considerations
-
-The following security considerations were identified during this project:
-
-- Administrator credentials must not be published in GitHub.
-- Public IP addresses should be hidden in public screenshots.
-- RDP port `3389` should not be unnecessarily exposed to the public internet.
-- Network Security Group rules should allow only the access required.
-- Access should be restricted to approved source IP addresses where possible.
-- Certificate warnings should be reviewed rather than automatically ignored.
-- Azure credentials, subscription IDs, tenant IDs, and authentication details must be removed from screenshots.
-- Resources should be stopped, deallocated, or deleted when they are no longer required.
-- Resource Groups should be reviewed carefully before deletion.
-
----
-
 # 🔧 Challenges and Troubleshooting
 
 ## Remote Desktop Certificate Warning
