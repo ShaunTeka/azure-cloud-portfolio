@@ -40,7 +40,7 @@ Computer Configuration
         └── Security Settings
 ```
 
-[Back to Lab Navigation](#-lab-navigation)
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -108,7 +108,7 @@ The final password configuration was:
 | Password complexity | Enabled |
 | Reversible encryption | Disabled |
 
-[⬆️ Back to Lab Navigation](#-lab-navigation)
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -139,7 +139,7 @@ Final configuration:
 
 ![Final Account Lockout Policy](./screenshots/10-final-account-lockout-policy.png)
 
-[⬆️ Back to Lab Navigation](#-lab-navigation)
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -187,7 +187,7 @@ Mode → Bi-directional (full on-access)
 Turn on behavior monitoring → Enabled
 ```
 
-[⬆️ Back to Lab Navigation](#-lab-navigation)
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -216,7 +216,7 @@ This area provides centralized management of:
 
 > **Note:** The captured screenshot shows the firewall profiles as **Not Configured**. This section therefore demonstrates centralized firewall administration and policy discovery rather than claiming that firewall rules were enforced.
 
-[⬆️ Back to Lab Navigation](#-lab-navigation)
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -250,7 +250,7 @@ Grace Period: 2 days
 
 This demonstrates how Group Policy can control update behaviour and update deadlines across managed Windows systems.
 
-[⬆️ Back to Lab Navigation](#-lab-navigation)
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -381,7 +381,7 @@ The report also confirmed that the **Default Domain Policy** was applied to the 
 
 > **Note:** The report was generated while `SMTAdmin` was signed in as a local account. Therefore, this report provesolicies**, but does not yet prove domain-user policies such as Desktop Wallpaper or Drive Mapping.
 
-#-lab-navigation
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -451,3 +451,4 @@ Policy Validation
 
 > **Key takeaway:** Configuration is only part of administration. A policy should also be tested and verified to prove that the intended configuration reached the target computer.
 
+[Back to Lab Navigation](#lab-navigation)
