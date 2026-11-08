@@ -25,7 +25,7 @@ During this lab, I:
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 The objectives of this Azure lab were to:
 
@@ -43,7 +43,7 @@ The objectives of this Azure lab were to:
 
 ---
 
-## 🧰 Azure Services and Technologies
+## Azure Services and Technologies
 
 `Microsoft Azure`
 
@@ -87,7 +87,7 @@ The objectives of this Azure lab were to:
 
 ---
 
-# ⚙️ Implementation and Demonstration
+# Implementation and Demonstration
 
 ## 1. Sign in to the Azure Portal
 
@@ -315,7 +315,7 @@ I logged in to the Windows Server operating system running on the Azure Virtual 
 
 ---
 
-# 🪟 Exploring Windows Server 2025
+# Exploring Windows Server 2025
 
 ## 15. Load Windows Server Manager
 
@@ -353,7 +353,7 @@ The exact roles and services should be selected according to the requirements of
 
 ---
 
-# ⏹️ Stopping and Deallocating the VM
+# Stopping and Deallocating the VM
 
 ## 18. Shut Down the Windows Session
 
@@ -495,7 +495,7 @@ Azure resources should be monitored and managed actively. Lab resources should b
 
 ---
 
-# 📚 What I Learned
+# What I Learned
 
 Through this project, I gained practical experience with:
 
