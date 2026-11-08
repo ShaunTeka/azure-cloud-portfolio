@@ -1,45 +1,129 @@
-# 🖥️ Azure Virtual Machine Deployment Lab
-
-A hands-on Microsoft Azure project demonstrating how I deployed, accessed, managed, stopped, and removed a Windows Server 2025 Virtual Machine using the Azure Portal.
-
----
 
 ## 📌 Project Overview
 
-This project documents my practical experience creating and managing a **Windows Server 2025 Virtual Machine** in Microsoft Azure.
+This project demonstrates my practical experience deploying and administering a **Windows Server Virtual Machine in Microsoft Azure**.
 
-The deployment was completed through the **Azure Portal**, which provides a browser-based interface for creating virtual machines and their supporting resources.
+The environment was deployed through the **Azure Portal** and incorporated:
 
-During this lab, I:
+- Microsoft Azure
+- Azure Virtual Machines
+- Windows Server 2025
+- Trusted Launch
+- Azure Virtual Networking
+- Network Security Groups
+- Public IP connectivity
+- Remote Desktop Protocol
+- Managed Disks
+- Azure Resource Groups
 
-- Signed in to the Azure Portal
-- Created a new Resource Group
-- Configured a Windows Server 2025 Virtual Machine
-- Selected the Trusted Launch security type
-- Configured Remote Desktop access
-- Deployed the Virtual Machine
-- Connected to the server through RDP
-- Accessed Windows Server Manager
-- Stopped and deallocated the Virtual Machine
-- Reviewed the process for deleting the Resource Group
+The project follows the complete infrastructure lifecycle:
+
+```text
+PLAN
+  ↓
+CONFIGURE
+  ↓
+SECURE
+  ↓
+VALIDATE
+  ↓
+DEPLOY
+  ↓
+CONNECT
+  ↓
+ADMINISTER
+  ↓
+DEALLOCATE
+  ↓
+CLEAN UP
+```
 
 ---
 
-## Project Objectives
+## 🎯 Project Objectives
 
-The objectives of this Azure lab were to:
+The objectives of this lab were to:
 
-- Gain hands-on experience using the Azure Portal
+- Gain hands-on experience with the Azure Portal
 - Create and manage an Azure Resource Group
-- Deploy a Windows Server Virtual Machine
-- Understand Azure VM images and sizes
-- Configure administrator credentials
-- Configure Remote Desktop access
+- Deploy a Windows Server 2025 Virtual Machine
+- Understand Azure VM images and compute sizing
+- Configure administrator access
+- Implement Trusted Launch
+- Configure Azure networking
 - Understand Network Security Group rules
-- Connect to an Azure VM using RDP
-- Access Windows Server Manager
-- Stop and deallocate an Azure VM
-- Understand how to remove Azure resources when they are no longer required
+- Configure Remote Desktop connectivity
+- Administer Windows Server remotely
+- Understand Azure VM power states
+- Stop and deallocate cloud resources
+- Review safe Azure resource cleanup
+- Apply cloud security and cost-awareness principles
+
+---
+
+## 🧭 Project Navigation
+
+- #-solution-architecture
+- #-azure-services--technologies
+- #️-lab-configuration
+- #-virtual-machine-deployment
+- #-remote-access--administration
+- #️-windows-server-administration
+- #️-vm-deallocation--cost-management
+- #️-azure-resource-cleanup
+- #-security-considerations
+- #-challenges--troubleshooting
+- #-skills-demonstrated
+- #-project-outcome
+
+---
+
+# 🏗️ Solution Architecture
+
+The project used a standard Azure-hosted Windows Server architecture:
+
+```text
+                    Microsoft Azure
+                          │
+                    Resource Group
+                     SMTVM-RG01
+                          │
+                 Azure Virtual Network
+                          │
+                Network Security Group
+                          │
+                  Public IP Address
+                          │
+                    RDP / TCP 3389
+                          │
+              ┌─────────────────────┐
+              │   Azure VM          │
+              │                     │
+              │ Windows Server 2025 │
+              │                     │
+              │   Trusted Launch    │
+              └─────────────────────┘
+                          │
+                     Managed Disk
+```
+
+Remote administration followed this path:
+
+```text
+Administrative Workstation
+          │
+          │ RDP / TCP 3389
+          ↓
+      Public IP
+          ↓
+Network Security Group
+          ↓
+ Windows Server VM
+```
+
+> ⚠️ Direct internet exposure of RDP should be tightly controlled in production environments.
+
+[⬆️ Back to Project Navigation](#-project-navigation)
 
 ---
 
