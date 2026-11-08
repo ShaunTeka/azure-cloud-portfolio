@@ -8,16 +8,16 @@ After completing the Active Directory setup, I used **Group Policy** to centrall
 
 Click any item below to jump directly to that section:
 
-- [ Password Security](#-password-security)
-- [Account Lockout Protection](#-account-lockout-protection)
-- [Microsoft Defender Antivirus](#️-microsoft-defender-antivirus)
-- [Windows Defender Firewall](#-windows-defender-firewall)
-- [Windows Update Management](#-windows-update-management)
-- [Corporate Desktop Configuration](#-corporate-desktop-configuration)
-- [Removable Storage Restrictions](#-removable-storage-restrictions)
-- [Department Network Shares](#-department-network-shares)
-- [Group Policy Drive Mapping](#-group-policy-drive-mapping)
-- [Group Policy Validation and Reporting](#-group-policy-validation-and-reporting)
+- [ Password Security](#password-security)
+- [Account Lockout Protection](#account-lockout-protection)
+- [Microsoft Defender Antivirus](#️microsoft-defender-antivirus)
+- [Windows Defender Firewall](#windows-defender-firewall)
+- [Windows Update Management](#windows-update-management)
+- [Corporate Desktop Configuration](#corporate-desktop-configuration)
+- [Removable Storage Restrictions](#removable-storage-restrictions)
+- [Department Network Shares](#department-network-shares)
+- [Group Policy Drive Mapping](#group-policy-drive-mapping)
+- [Group Policy Validation and Reporting](#group-policy-validation-and-reporting)
 
 ---
 
