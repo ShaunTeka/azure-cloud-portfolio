@@ -280,8 +280,8 @@ DepartmentShares
 ├── HR
 └── IT
 ```
+![Department Shares](./screenshots/19-department-shares.png)
 
-./screenshots/19-department-shares.png
 
 I then enabled file sharing for the IT department folder.
 
@@ -289,8 +289,8 @@ I then enabled file sharing for the IT department folder.
 Folder: IT
 Share Name: IT
 ```
+![IT Department Shares](./screenshots/20-it-department-share.png)
 
-./screenshots/20-it-department-share.png
 
 This creates the foundation for department-specific network resources.
 
@@ -306,7 +306,7 @@ Network Share
 Drive Mapping
 ```
 
-#-lab-navigation
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
@@ -320,8 +320,7 @@ User Configuration
 → Windows Settings
 → Drive Maps
 ```
-
-./screenshots/18-group-policy-drive-maps.png
+![Group Policy Drive Maps](./screenshots/18-group-policy-drive-maps.png)
 
 Group Policy Preferences can automatically provide network shares to users.
 
@@ -335,7 +334,7 @@ IT Users      → IT Share
 
 This demonstrates how Active Directory identity, file services and Group Policy can work together to provide resources automatically.
 
-#-lab-navigation
+[Back to Lab Navigation](#lab-navigation)
 
 ---
 
