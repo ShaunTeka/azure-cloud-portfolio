@@ -19,20 +19,24 @@ This project demonstrates the implementation of a Windows domain environment usi
 - [ ] Windows File Services
 - [ ] PowerShell
 
+## 🔄 Infrastructure Lifecycle
+
 The project follows five infrastructure phases:
 
-```text
-BUILD
-  ↓
-CONNECT
-  ↓
-SECURE
-  ↓
-MANAGE
-  ↓
-VALIDATE
-```
+```mermaid
+flowchart TB
 
+    Build["🏗️ BUILD<br/>Deploy Azure Infrastructure"]
+    Connect["🌐 CONNECT<br/>Configure Network & DNS"]
+    Secure["🔐 SECURE<br/>Active Directory & GPO"]
+    Manage["⚙️ MANAGE<br/>Users, Policies & Access"]
+    Validate["✅ VALIDATE<br/>Test Security & Connectivity"]
+
+    Build --> Connect
+    Connect --> Secure
+    Secure --> Manage
+    Manage --> Validate
+```
 ---
 ## 🏗️ Architecture
 
