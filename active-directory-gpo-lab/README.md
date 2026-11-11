@@ -35,26 +35,6 @@ VALIDATE
 
 ---
 
-## 🏗️ Architecture 
-
-```text
-Microsoft Azure
-      ↓
-Azure Virtual Network
-      │
-      ├───────────────┐
-      ↓               ↓
-Windows Server     Windows Client
-      ↓            SMT-CLIENT01
-Active Directory       │
-      ↓                │
-     DNS ◄─────────────┘
-      ↓
-Domain Controller
-      ↓
-Group Policy
-      ↓
-Security + Management
 ```
 ## 🏗️ Architecture
 
