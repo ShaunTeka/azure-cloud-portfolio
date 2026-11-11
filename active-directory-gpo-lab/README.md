@@ -67,7 +67,7 @@ Security + Management
 
 Built the core Windows domain infrastructure, including **Active Directory Domain Services, DNS, Domain Controller services, Organizational Units, users, computers, and directory administration**.
 
-📁 [View Active Directory Infrastructure](./01-active-directory-setup/)
+📁 [View Active Directory Infrastructure](./active-directory-setup/)
 
 **Demonstrates:** Windows Server · AD DS · DNS · Domain Administration
 
@@ -87,7 +87,7 @@ nslookup shaunmonwabisiteka.com
 nltest /dsgetdc:shaunmonwabisiteka.com
 ```
 
-📁 [View Client Integration & Domain Join](./02-client-domain-join/)
+📁 [View Client Integration & Domain Join](./client-domain-join/)
 
 **Demonstrates:** Azure Networking · DNS · Windows Client · AD Integration · Troubleshooting
 
@@ -106,7 +106,7 @@ Implemented centralized Windows security controls through Group Policy, includin
 - Removable-storage restrictions
 - User-environment configuration
 
-📁 [View Group Policy Security Hardening](./03-group-policy-security/)
+📁 [View Group Policy Security Hardening](./group-policy-security/)
 
 **Demonstrates:** GPO · Identity Security · Endpoint Security · Security Administration
 
@@ -138,7 +138,7 @@ Network Shares
 Drive Mapping
 ```
 
-📁 [View File Services & Resource Access](./04-file-services/)
+📁 [View File Services & Resource Access](./file-services/)
 
 **Demates:** Windows File Services · Permissions · Group Policy Preferences
 
@@ -159,7 +159,7 @@ gpresult /h GPReport.html
 
 The validation evidence demonstrated successful processing of the applicable domain policy on the managed client.
 
-📁 [View Policy Validation](./05-validation/)
+📁 [View Policy Validation](./validation/)
 
 **Demonstrates:** GPUpdate · GPResult · Troubleshooting · Evidence-Based Validation
 
