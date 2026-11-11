@@ -8,7 +8,7 @@ A hands-on Windows infrastructure and security project demonstrating how I built
 
 This project demonstrates the implementation of a Windows domain environment using:
 
-- Microsoft Azure
+- [Microsoft Azure](./azure-vm-deployment/)
 - Windows Server
 - Active Directory Domain Services
 - DNS
