@@ -8,16 +8,16 @@ A hands-on Windows infrastructure and security project demonstrating how I built
 
 This project demonstrates the implementation of a Windows domain environment using:
 
-- [Microsoft Azure](https://github.com/ShaunTeka/azure-cloud-portfolio/tree/main/azure-vm-deployment)
-- Windows Server
-- Active Directory Domain Services
-- DNS
-- Windows 11
-- Group Policy
-- Microsoft Defender
-- Windows Defender Firewall
-- Windows File Services
-- PowerShell
+- [x] [Microsoft Azure](https://github.com/ShaunTeka/azure-cloud-portfolio/tree/main/azure-vm-deployment)
+- [ ] Windows Server
+- [ ] Active Directory Domain Services
+- [ ] DNS
+- [ ] Windows 11
+- [ ] Group Policy
+- [ ] Microsoft Defender
+- [ ] Windows Defender Firewall
+- [ ] Windows File Services
+- [ ] PowerShell
 
 The project follows five infrastructure phases:
 
