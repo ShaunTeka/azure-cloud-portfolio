@@ -35,7 +35,7 @@ VALIDATE
 
 ---
 
-## 🏗️ Architecture
+## 🏗️ Architecture 
 
 ```text
 Microsoft Azure
