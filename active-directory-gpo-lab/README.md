@@ -34,8 +34,6 @@ VALIDATE
 ```
 
 ---
-
-```
 ## 🏗️ Architecture
 
 <br>
@@ -86,6 +84,18 @@ flowchart LR
 
     Admin -->|"RDP / TCP 3389"| DC
 ```
+
+### Architecture flow
+
+- **Microsoft Azure**
+  - **Azure Virtual Network**
+    - 🖥️ Windows Server
+      - Domain Controller
+      - Active Directory Domain Services
+      - DNS
+      - Group Policy Management
+    - 💻 Windows Client
+      - SMT-CLIENT01
 ---
 
 # Project Modules
