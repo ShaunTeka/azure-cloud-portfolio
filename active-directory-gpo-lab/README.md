@@ -106,34 +106,6 @@ flowchart LR
 
     Admin -->|"RDP / TCP 3389"| DC
 ```
-
-### Architecture flow
-
-- **Microsoft Azure**
-  - **Azure Virtual Network**
-    - 🖥️ Windows Server
-      - Domain Controller
-      - Active Directory Domain Services
-      - DNS
-      - Group Policy Management
-    - 💻 Windows Client
-      - SMT-CLIENT01
-- 👨‍💻 Administrator Workstation connects to the server using **RDP / TCP 3389**
-- SMT-CLIENT01 uses the Domain Controller for **DNS and domain authentication**
-- **Group Policy** applies your security configuration to the client
-
-### Why this fits your portfolio better
-
-This diagram demonstrates the actual technical story behind your **Active Directory + Group Policy Security Lab**, rather than showing a generic hierarchy.
-
-It makes the README communicate:
-
-**Azure infrastructure → networking → identity → DNS → endpoint → Group Policy → security enforcement**
-
-That is much stronger for the professional infrastructure/security portfolio you're building.
-
-**Main change:** I replaced all the unrelated Django, Redis, MySQL and API elements from your example with the Azure infrastructure components from your lab, while retaining the professional Mermaid architecture style and GitHub rendering approach.
-```
 ---
 
 # Project Modules
