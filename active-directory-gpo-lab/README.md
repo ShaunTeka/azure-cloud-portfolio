@@ -63,68 +63,76 @@ Security + Management
 ```mermaid
 flowchart LR
 
-    %% ========================
-    %% CLIENTS
-    %% ========================
-    subgraph Clients["Clients"]
-        direction TB
-        Calendars["Calendar apps"]
-        Browser["Browser"]
-        Integrations["API clients"]
+    %% =====================================
+    %% MICROSOFT AZURE
+    %% =====================================
+    subgraph Azure["☁️ Microsoft Azure"]
+
+        %% =================================
+        %% AZURE VIRTUAL NETWORK
+        %% =================================
+        subgraph VNET["🌐 Azure Virtual Network"]
+
+            %% SERVER SIDE
+            subgraph Server["🖥️ Windows Server"]
+                DC["Domain Controller"]
+                AD["🔐 Active Directory<br/>Domain Services"]
+                DNS["🌐 DNS Server"]
+                GPO["🛡️ Group Policy<br/>Management"]
+            end
+
+            %% CLIENT SIDE
+            subgraph Client["💻 Windows Client"]
+                SMT["SMT-CLIENT01"]
+            end
+
+            %% SERVER SERVICES
+            DC --> AD
+            AD --> DNS
+            AD --> GPO
+
+            %% CLIENT CONNECTIONS
+            SMT -->|"DNS Resolution"| DNS
+            SMT -->|"Domain Authentication"| AD
+            GPO -->|"Security Policies"| SMT
+
+        end
     end
 
-    %% ========================
-    %% DJANGO APPLICATION
-    %% ========================
-    subgraph Django["Django"]
-        direction LR
+    %% =====================================
+    %% MANAGEMENT
+    %% =====================================
+    Admin["👨‍💻 Administrator<br/>Workstation"]
 
-        Feeds["apps/feeds<br/>iCal"]
-        Public["apps/public<br/>server-rendered site"]
-        SPA["config/spa<br/>React web app shell"]
-        API["apps/api<br/>DRF views and serializers"]
-        Org["accounts, orgs,<br/>calendars, webhooks,<br/>notifications"]
-        Core["apps/core<br/>pure date logic"]
+    Admin -->|"RDP / TCP 3389"| DC
+```
 
-        Public --> Core
-        API --> Core
-        Feeds --> Core
-        API --> Org
-    end
+### Architecture flow
 
-    %% ========================
-    %% BACKGROUND SERVICES
-    %% ========================
-    Worker["Celery worker<br/>and Beat"]
+- **Microsoft Azure**
+  - **Azure Virtual Network**
+    - 🖥️ Windows Server
+      - Domain Controller
+      - Active Directory Domain Services
+      - DNS
+      - Group Policy Management
+    - 💻 Windows Client
+      - SMT-CLIENT01
+- 👨‍💻 Administrator Workstation connects to the server using **RDP / TCP 3389**
+- SMT-CLIENT01 uses the Domain Controller for **DNS and domain authentication**
+- **Group Policy** applies your security configuration to the client
 
-    %% ========================
-    %% DATA / EXTERNAL SERVICES
-    %% ========================
-    MySQL[("MySQL")]
-    Redis[("Redis")]
-    Holidays["holidays library"]
+### Why this fits your portfolio better
 
-    %% ========================
-    %% CLIENT CONNECTIONS
-    %% ========================
-    Calendars --> Feeds
-    Browser --> Public
-    Browser --> SPA
-    Integrations --> API
-    SPA --> API
+This diagram demonstrates the actual technical story behind your **Active Directory + Group Policy Security Lab**, rather than showing a generic hierarchy.
 
-    %% ========================
-    %% APPLICATION CONNECTIONS
-    %% ========================
-    Org --> MySQL
-    Core --> Holidays
+It makes the README communicate:
 
-    %% ========================
-    %% REDIS / CELERY
-    %% ========================
-    API -. "throttles and cache" .-> Redis
-    Worker --> Redis
-    Worker --> Org
+**Azure infrastructure → networking → identity → DNS → endpoint → Group Policy → security enforcement**
+
+That is much stronger for the professional infrastructure/security portfolio you're building.
+
+**Main change:** I replaced all the unrelated Django, Redis, MySQL and API elements from your example with the Azure infrastructure components from your lab, while retaining the professional Mermaid architecture style and GitHub rendering approach.
 ```
 ---
 
