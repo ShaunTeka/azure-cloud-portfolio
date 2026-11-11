@@ -56,7 +56,76 @@ Group Policy
       ↓
 Security + Management
 ```
+## 🏗️ Architecture
 
+<br>
+
+```mermaid
+flowchart LR
+
+    %% ========================
+    %% CLIENTS
+    %% ========================
+    subgraph Clients["Clients"]
+        direction TB
+        Calendars["Calendar apps"]
+        Browser["Browser"]
+        Integrations["API clients"]
+    end
+
+    %% ========================
+    %% DJANGO APPLICATION
+    %% ========================
+    subgraph Django["Django"]
+        direction LR
+
+        Feeds["apps/feeds<br/>iCal"]
+        Public["apps/public<br/>server-rendered site"]
+        SPA["config/spa<br/>React web app shell"]
+        API["apps/api<br/>DRF views and serializers"]
+        Org["accounts, orgs,<br/>calendars, webhooks,<br/>notifications"]
+        Core["apps/core<br/>pure date logic"]
+
+        Public --> Core
+        API --> Core
+        Feeds --> Core
+        API --> Org
+    end
+
+    %% ========================
+    %% BACKGROUND SERVICES
+    %% ========================
+    Worker["Celery worker<br/>and Beat"]
+
+    %% ========================
+    %% DATA / EXTERNAL SERVICES
+    %% ========================
+    MySQL[("MySQL")]
+    Redis[("Redis")]
+    Holidays["holidays library"]
+
+    %% ========================
+    %% CLIENT CONNECTIONS
+    %% ========================
+    Calendars --> Feeds
+    Browser --> Public
+    Browser --> SPA
+    Integrations --> API
+    SPA --> API
+
+    %% ========================
+    %% APPLICATION CONNECTIONS
+    %% ========================
+    Org --> MySQL
+    Core --> Holidays
+
+    %% ========================
+    %% REDIS / CELERY
+    %% ========================
+    API -. "throttles and cache" .-> Redis
+    Worker --> Redis
+    Worker --> Org
+```
 ---
 
 # Project Modules
