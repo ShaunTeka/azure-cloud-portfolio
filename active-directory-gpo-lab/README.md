@@ -1,453 +1,236 @@
-# 📌 Project Overview
+# Active Directory + Group Policy Security Lab
 
-This project demonstrates how I built and secured a Windows Active Directory environment using **Microsoft Azure Virtual Machines, Windows Server, Active Directory Domain Services, DNS, and Group Policy**.
-
-After completing the Active Directory setup, I used **Group Policy** to centrally manage security settings for domain-connected systems.
-
-## Lab Navigation
-
-Click any item below to jump directly to that section:
-
-- [ Password Security](#password-security)
-- [Account Lockout Protection](#account-lockout-protection)
-- [Microsoft Defender Antivirus](#️microsoft-defender-antivirus)
-- [Windows Defender Firewall](#windows-defender-firewall)
-- [Windows Update Management](#windows-update-management)
-- [Corporate Desktop Configuration](#corporate-desktop-configuration)
-- [Removable Storage Restrictions](#removable-storage-restrictions)
-- [Department Network Shares](#department-network-shares)
-- [Group Policy Drive Mapping](#group-policy-drive-mapping)
-- [Group Policy Validation and Reporting](#group-policy-validation-and-reporting)
+A hands-on Windows infrastructure and security project demonstrating how I built, integrated, secured, managed, and validated an **Active Directory Domain Services environment hosted on Microsoft Azure**.
 
 ---
 
-# Group Policy Management
+## 📌 Project Overview
 
-I used **Server Manager → Tools → Group Policy Management** to manage the domain's Group Policy settings centrally.
-
-![Group Policy Management](./screenshots/01-open-group-policy-management.png)
-
-I then opened the **Default Domain Policy** for editing.
-
-![Default Domain Policy](./screenshots/02-edit-default-domain-policy.png)
-
-The main security path used throughout the lab was:
-
-```text
-Computer Configuration
-└── Policies
-    └── Windows Settings
-        └── Security Settings
-```
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Password Security
-
-I configured domain-wide password controls through:
-
-```text
-Computer Configuration
-→ Policies
-→ Windows Settings
-→ Security Settings
-→ Account Policies
-→ Password Policy
-```
-
-![Password Policy](./screenshots/03-password-policy.png)
-
-## Password History
-
-```text
-10 passwords remembered
-```
-
-![Password History](./screenshots/04-password-history.png)
-
-Prevents users from immediately reusing recently used passwords.
-
-## Maximum Password Age
-
-```text
-90 days
-```
-
-![Maximum Password Age](./screenshots/05-maximum-password-age.png)
-
-Used in this lab to demonstrate centralized password lifecycle management.
-
-## Minimum Password Age
-
-```text
-1 day
-```
-
-![Minimum Password Age](./screenshots/06-minimum-password-age.png)
-
-Prevents users from rapidly cycling through passwords to bypass password history.
-
-## Minimum Password Length
-
-```text
-12 characters
-```
-
-![Minimum Password Length](./screenshots/07-minimum-password-length.png)
-
-The final password configuration was:
-
-| Policy | Configuration |
-|---|---:|
-| Password history | 10 passwords |
-| Maximum password age | 90 days |
-| Minimum password age | 1 day |
-| Minimum password length | 12 characters |
-| Password complexity | Enabled |
-| Reversible encryption | Disabled |
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Account Lockout Protection
-
-I configured account lockout controls to reduce repeated password-guessing attempts.
-
-## Account Lockout Threshold
-
-```text
-3 invalid logon attempts
-```
-
-![Account Lockout Threshold](./screenshots/08-account-lockout-threshold.png)
-
-Windows also suggested related lockout settings:
-
-![Suggested Account Lockout Settings](./screenshots/09-account-lockout-suggested-settings.png)
-
-Final configuration:
-
-| Policy | Configuration |
-|---|---:|
-| Account lockout threshold | 3 attempts |
-| Account lockout duration | 10 minutes |
-| Reset lockout counter | 10 minutes |
-| Administrator account lockout | Enabled |
-
-![Final Account Lockout Policy](./screenshots/10-final-account-lockout-policy.png)
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Microsoft Defender Antivirus
-
-I configured Microsoft Defender settings using:
-
-```text
-Computer Configuration
-→ Policies
-→ Administrative Templates
-→ Windows Components
-→ Microsoft Defender Antivirus
-→ Real-time Protection
-```
-
-![Microsoft Defender Real-time Protection](./screenshots/11-windows-defender-real-time-protection.png)
-
-## Behavior Monitoring
-
-I enabled:
-
-```text
-Turn on behavior monitoring
-```
-
-![Defender Behavior Monitoring](./screenshots/12-defender-behavior-monitoring.png)
-
-This provides additional endpoint protection by monitoring application and process behavior.
-
-## File and Program Monitoring
-
-I also configured monitoring for incoming and outgoing files and program activity.
-
-![Defender File Monitoring](./screenshots/13-defender-file-monitoring.png)
-
-The final Group Policy Results report confirmed:
-
-```text
-Configure monitoring for incoming and outgoing
-file and program activity → Enabled
-
-Mode → Bi-directional (full on-access)
-
-Turn on behavior monitoring → Enabled
-```
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Windows Defender Firewall
-
-I explored centralized firewall management through:
-
-```text
-Computer Configuration
-→ Policies
-→ Windows Settings
-→ Security Settings
-→ Windows Defender Firewall with Advanced Security
-```
-
-![Windows Defender Firewall](./screenshots/14-windows-firewall.png)
-
-This area provides centralized management of:
-
-- Domain Profile
-- Private Profile
-- Public Profile
-- Inbound Rules
-- Outbound Rules
-- Connection Security Rules
-
-> **Note:** The captured screenshot shows the firewall profiles as **Not Configured**. This section therefore demonstrates centralized firewall administration and policy discovery rather than claiming that firewall rules were enforced.
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Windows Update Management
-
-I configured Windows Update policies to demonstrate centralized patch-management control.
-
-The validated computer policy included:
-
-```text
-Configure Automatic Updates
-→ Enabled
-
-Update Mode
-→ Auto download and notify for install
-```
-
-### Feature Updates
-
-```text
-Deadline: 2 days
-Grace Period: 7 days
-```
-
-### Quality Updates
-
-```text
-Deadline: 7 days
-Grace Period: 2 days
-```
-
-This demonstrates how Group Policy can control update behaviour and update deadlines across managed Windows systems.
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Corporate Desktop Configuration
-
-I configured a corporate wallpaper through:
-
-```text
-User Configuration
-→ Policies
-→ Administrative Templates
-→ Desktop
-→ Desktop
-→ es
-
-I created departmental folders under:
-
-```text
-C:\DepartmentShares
-```
-
-Structure:
-
-```text
-DepartmentShares
-├── Finance
-├── HR
-└── IT
-```
-![Department Shares](./screenshots/19-department-shares.png)
-
-
-I then enabled file sharing for the IT department folder.
-
-```text
-Folder: IT
-Share Name: IT
-```
-![IT Department Shares](./screenshots/20-it-department-share.png)
-
-
-This creates the foundation for department-specific network resources.
-
-```text
-Active Directory User
-        ↓
-Security Group
-        ↓
-Department Permissions
-        ↓
-Network Share
-        ↓
-Drive Mapping
-```
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Group Policy Drive Mapping
-
-I opened:
-
-```text
-User Configuration
-→ Preferences
-→ Windows Settings
-→ Drive Maps
-```
-![Group Policy Drive Maps](./screenshots/18-group-policy-drive-maps.png)
-
-Group Policy Preferences can automatically provide network shares to users.
-
-For example:
-
-```text
-Finance Users → Finance Share
-HR Users      → HR Share
-IT Users      → IT Share
-```
-
-This demonstrates how Active Directory identity, file services and Group Policy can work together to provide resources automatically.
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Group Policy Validation and Reporting
-
-The final stage was **validation**.
-
-I manually refreshed Group Policy on the client:
-
-```powershell
-gpupdate /force
-```
-
-I then generated a Group Policy Results report:
-
-```powershell
-gpresult /h GPReport.html
-```
-
-The report confirmed successful computer-side Group Policy processing on `SMT-CLIENT01`.
-
-```text
-Computer Policy
-→ No Errors Detected
-
-Applied GPO
-→ Default Domain Policy
-```
-
-The following policy-processing components completed successfully:
-
-```text
-Group Policy Infrastructure → Success
-Registry                    → Success
-Security                    → Success
-```
-
-The report also confirmed that the **Default Domain Policy** was applied to the client computer. 【1-1650b8】
-
-### Validation Report
-
-[View GPReport.html](./reports/GPReport.html)
-
-> **Note:** The report was generated while `SMTAdmin` was signed in as a local account. Therefore, this report provesolicies**, but does not yet prove domain-user policies such as Desktop Wallpaper or Drive Mapping.
-
-[Back to Lab Navigation](#lab-navigation)
-
----
-
-# Project Results
-
-| Area | Result |
-|---|---|
-| Password Security |  Configured and validated |
-| Account Lockout | Configured and validated |
-| Microsoft Defender | Configured and validated |
-| Windows Firewall | Explored |
-| Windows Update | Configured and validated |
-| Corporate Wallpaper | Configured |
-| Removable Storage | Configured |
-| Department Shares | Created |
-| Drive Mapping | Prepared |
-| GPResult Validation | Completed |
-
----
-
-#  Skills Demonstrated
+This project demonstrates the implementation of a Windows domain environment using:
 
 - Microsoft Azure
 - Windows Server
 - Active Directory Domain Services
 - DNS
-- Group Policy Management
-- Password and account security
-- Microsoft Defender Antivirus
+- Windows 11
+- Group Policy
+- Microsoft Defender
 - Windows Defender Firewall
-- Windows Update management
-- Removable storage controls
-- Windows file sharing
-- Group Policy Preferences
-- Network drive mapping
-- Windows client administration
+- Windows File Services
 - PowerShell
-- `gpupdate`
-- `gpresult`
-- Technical validation and documentation
+
+The project follows five infrastructure phases:
+
+```text
+BUILD
+  ↓
+CONNECT
+  ↓
+SECURE
+  ↓
+MANAGE
+  ↓
+VALIDATE
+```
+
+---
+
+## 🏗️ Architecture
+
+```text
+Microsoft Azure
+      ↓
+Azure Virtual Network
+      │
+      ├───────────────┐
+      ↓               ↓
+Windows Server     Windows Client
+      ↓            SMT-CLIENT01
+Active Directory       │
+      ↓                │
+     DNS ◄─────────────┘
+      ↓
+Domain Controller
+      ↓
+Group Policy
+      ↓
+Security + Management
+```
+
+---
+
+# Project Modules
+
+## 01 — Active Directory Infrastructure
+
+**BUILD**
+
+Built the core Windows domain infrastructure, including **Active Directory Domain Services, DNS, Domain Controller services, Organizational Units, users, computers, and directory administration**.
+
+📁 [View Active Directory Infrastructure](./01-active-directory-setup/)
+
+**Demonstrates:** Windows Server · AD DS · DNS · Domain Administration
+
+---
+
+## 02 — Client Integration & Domain Join
+
+**CONNECT**
+
+Configured the Azure-hosted Windows client to use the Domain Controller for DNS, validated domain resolution and Domain Controller discovery, and successfully joined `SMT-CLIENT01` to the domain.
+
+Key validation included:
+
+```powershell
+ipconfig /all
+nslookup shaunmonwabisiteka.com
+nltest /dsgetdc:shaunmonwabisiteka.com
+```
+
+📁 [View Client Integration & Domain Join](./02-client-domain-join/)
+
+**Demonstrates:** Azure Networking · DNS · Windows Client · AD Integration · Troubleshooting
+
+---
+
+## 03 — Group Policy Security Hardening
+
+**SECURE**
+
+Implemented centralized Windows security controls through Group Policy, including:
+
+- Password policies
+- Account lockout protection
+- Microsoft Defender configuration
+- Windows Update management
+- Removable-storage restrictions
+- User-environment configuration
+
+📁 [View Group Policy Security Hardening](./03-group-policy-security/)
+
+**Demonstrates:** GPO · Identity Security · Endpoint Security · Security Administration
+
+---
+
+## 04 — File Services & Resource Access
+
+**MANAGE**
+
+Created departmental resources and explored centralized delivery of network shares.
+
+```text
+Finance
+HR
+IT
+```
+
+The project also demonstrates the relationship between:
+
+```text
+Active Directory Identity
+        ↓
+Security Groups
+        ↓
+Permissions
+        ↓
+Network Shares
+        ↓
+Drive Mapping
+```
+
+📁 [View File Services & Resource Access](./04-file-services/)
+
+**Demates:** Windows File Services · Permissions · Group Policy Preferences
+
+---
+
+## 05 — Policy Validation & Evidence
+
+**VALIDATE**
+
+Verified that the Windows client successfully processed computer-side Group Policy.
+
+Validation included:
+
+```powershell
+gpupdate /force
+gpresult /h GPReport.html
+```
+
+The validation evidence demonstrated successful processing of the applicable domain policy on the managed client.
+
+📁 [View Policy Validation](./05-validation/)
+
+**Demonstrates:** GPUpdate · GPResult · Troubleshooting · Evidence-Based Validation
+
+---
+
+# 📊 Project Results
+
+| Area | Result |
+|---|---|
+| Active Directory | Implemented |
+| DNS | Configured and tested |
+| Domain-joined client | Completed |
+| Domain Controller discovery | Validated |
+| Password security | Configured |
+| Account lockout | Configured |
+| Microsoft Defender | Configured |
+| Windows Update | Configured |
+| Removable storage controls | Configured |
+| Department shares | Created |
+| Drive mapping | Prepared |
+| Group Policy validation | Completed |
+
+---
+
+# Skills Demonstrated
+
+### Cloud Infrastructure
+`Microsoft Azure` · `Azure VMs` · `Azure Networking` · `NSGs`
+
+### Identity
+`Active Directory` · `AD DS` · `DNS` · `Domain Controllers`
+
+### Administration
+`Group Policy` · `Windows Server` · `PowerShell`
+
+### Security
+`Microsoft Defender` · `Password Policy` · `Account Lockout` · `Endpoint Hardening`
+
+### Networking
+`DNS` · `IPv4` · `NICs` · `Domain Discovery`
+
+### Validation
+`ipconfig` · `nslookup` · `nltest` · `gpupdate` · `gpresult`
 
 ---
 
 # Project Outcome
 
-This project demonstrates the complete progression from building an Active Directory environment to centrally securing and validating Windows systems:
+This project progressed from basic Windows infrastructure into a centrally managed Active Directory environment:
 
 ```text
- Azure Infrastructure
-        ↓
- Windows Server
-        ↓
+BUILD
 Active Directory + DNS
         ↓
- Domain-Joined Client
+CONNECT
+Windows Client + Domain Join
         ↓
- Group Policy
+SECURE
+Group Policy + Endpoint Controls
         ↓
-Security Hardening
+MANAGE
+Users + Resources
         ↓
- Endpoint Protection
-        ↓
-Shared Resources
-        ↓
-Policy Validation
+VALIDATE
+Client-Side Technical Evidence
 ```
 
-> **Key takeaway:** Configuration is only part of administration. A policy should also be tested and verified to prove that the intended configuration reached the target computer.
+The project demonstrates more than installation. It shows the ability to **build, connect, secure, administer, troubleshoot, and validate a Windows enterprise environment hosted in Microsoft Azure**.
 
-[Back to Lab Navigation](#lab-navigation)
+---
+
+## Key Takeaway
+
+> **A successful Active Directory implementation is not just a Domain Controller. It requires reliable networking and DNS, managed endpoints, centralized security controls, controlled access to resources, and evidence that the intended policies are actually being applied.**
