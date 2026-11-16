@@ -10,7 +10,7 @@ Each project demonstrates practical implementation using the Azure Portal and do
 
 ## Projects
 
-### 🖥️ 01. Azure Virtual Machine Deployment
+### 01. Azure Virtual Machine Deployment
 
 Deploying and configuring a virtual machine in Microsoft Azure.
 
@@ -20,7 +20,7 @@ Deploying and configuring a virtual machine in Microsoft Azure.
 
 `Azure Virtual Machines` `Resource Groups` `Virtual Network` `Subnet` `Network Security Groups` `Public IP` `Managed Disks`
 
-#### 🎯 Objective
+#### Objective
 
 Deploy and configure an Azure Virtual Machine while developing practical knowledge of the core Azure infrastructure required to host workloads in the cloud.
 
@@ -30,7 +30,7 @@ Deploy and configure an Azure Virtual Machine while developing practical knowled
 
 ---
 
-### 🌐 02. Azure Networking Lab
+### 02. Azure Networking Lab
 
 Building and configuring network infrastructure in Microsoft Azure.
 
@@ -40,7 +40,7 @@ Building and configuring network infrastructure in Microsoft Azure.
 
 `Virtual Network` `Subnets` `Network Security Groups` `Public IP` `Network Interfaces`
 
-#### 🎯 Objective
+#### Objective
 
 Develop practical experience configuring Azure networking components and understanding how Azure resources communicate securely across virtual networks.
 #### 📁 Project Documentation
@@ -49,7 +49,7 @@ Develop practical experience configuring Azure networking components and underst
 
 ---
 
-### 💾 03. Azure Storage Lab
+### 03. Azure Storage Lab
 
 Exploring cloud storage and data management in Microsoft Azure.
 
@@ -59,7 +59,7 @@ Exploring cloud storage and data management in Microsoft Azure.
 
 `Storage Accounts` `Blob Storage` `Containers` `Access Control`
 
-#### 🎯 Objective
+#### Objective
 
 Develop hands-on experience creating and managing Azure Storage resources.
 #### 📁 Project Documentation
@@ -68,7 +68,7 @@ Develop hands-on experience creating and managing Azure Storage resources.
 
 ---
 
-### 🔐 04. Microsoft Entra ID & RBAC Lab
+### 04. Microsoft Entra ID & RBAC Lab
 
 Exploring identity, permissions, and access management within Microsoft Azure.
 
@@ -78,7 +78,7 @@ Exploring identity, permissions, and access management within Microsoft Azure.
 
 `Microsoft Entra ID` `Azure RBAC` `Identity and Access Management (IAM)` `Azure Portal` `Azure Resource Groups`
 
-#### 🎯 Objective
+#### Objective
 
 The objective of this lab is to gain hands-on experience with **identity and access management in Microsoft Azure**.
 
@@ -88,7 +88,7 @@ The objective of this lab is to gain hands-on experience with **identity and acc
 
 ---
 
-### 📊 05. Azure Monitoring Lab
+### 05. Azure Monitoring Lab
 
 Exploring resource monitoring, performance visibility, logging, and operational insights within Microsoft Azure.
 
@@ -98,7 +98,7 @@ Exploring resource monitoring, performance visibility, logging, and operational 
 
 `Azure Monitor` `Log Analytics Workspace` `Azure Metrics` `Activity Log` `Azure Alerts` `Azure Portal`
 
-#### 🎯 Objective
+#### Objective
 
 The objective of this lab is to gain hands-on experience with **monitoring and operational visibility in Microsoft Azure**.
 
@@ -122,7 +122,7 @@ This project will focus on:
 
 ---
 
-### 🛡️ 06. Azure Governance Lab
+### 06. Azure Governance Lab
 
 Exploring governance, resource organisation, policy enforcement, and management controls within Microsoft Azure.
 
@@ -132,7 +132,7 @@ Exploring governance, resource organisation, policy enforcement, and management 
 
 `Azure Policy` `Azure Resource Groups` `Resource Tags` `Azure RBAC` `Azure Cost Management` `Azure Portal`
 
-#### 🎯 Objective
+#### Objective
 
 The objective of this lab is to gain hands-on experience with **Azure governance and resource management**.
 
