@@ -4,7 +4,7 @@ A hands-on Windows infrastructure and security project demonstrating how I built
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates the implementation of a Windows domain environment using:
 
@@ -19,7 +19,7 @@ This project demonstrates the implementation of a Windows domain environment usi
 - [ ] Windows File Services
 - [ ] PowerShell
 
-## 🔄 Infrastructure Lifecycle
+## Infrastructure Lifecycle
 
 The project follows five infrastructure phases:
 
@@ -38,7 +38,7 @@ flowchart TB
     Manage --> Validate
 ```
 ---
-## 🏗️ Architecture
+## Architecture
 
 <br>
 
@@ -208,7 +208,7 @@ The validation evidence demonstrated successful processing of the applicable dom
 
 ---
 
-# 📊 Project Results
+#  Project Results
 
 | Area | Result |
 |---|---|
