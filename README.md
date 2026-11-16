@@ -1,4 +1,4 @@
-# ☁️ Azure Cloud Portfolio
+# Azure Cloud Portfolio
 
 **Building practical Microsoft Azure skills through hands-on cloud projects.**
 
@@ -8,7 +8,7 @@ Each project demonstrates practical implementation using the Azure Portal and do
 
 ---
 
-## 🚀 Projects
+## Projects
 
 ### 🖥️ 01. Azure Virtual Machine Deployment
 
