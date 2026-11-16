@@ -1,5 +1,5 @@
 
-## 📌 Project Overview
+## Project Overview
 
 This project demonstrates my practical experience deploying and administering a **Windows Server Virtual Machine in Microsoft Azure**.
 
@@ -40,7 +40,7 @@ CLEAN UP
 
 ---
 
-## 🎯 Project Objectives
+## Project Objectives
 
 The objectives of this lab were to:
 
@@ -61,7 +61,7 @@ The objectives of this lab were to:
 
 ---
 
-## 🧭 Project Navigation
+## Project Navigation
 
 - #-solution-architecture
 - #-azure-services--technologies
@@ -78,7 +78,7 @@ The objectives of this lab were to:
 
 ---
 
-# 🏗️ Solution Architecture
+# Solution Architecture
 
 The project used a standard Azure-hosted Windows Server architecture:
 
@@ -151,7 +151,7 @@ Network Security Group
 
 ---
 
-## 🏗️ Lab Configuration
+## Lab Configuration
 
 | Configuration | Selection |
 |---|---|
