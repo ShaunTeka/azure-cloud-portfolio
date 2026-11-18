@@ -515,19 +515,6 @@ The following security practices were followed or should be applied to this envi
 - Administrative accounts should not be used for normal daily activities.
 - Sensitive Azure subscription xt
 172.16.0.4
-```
-
-Restart the client or renew the network configuration before testing again.
-
----
-
-## Domain Does Not Resolve
-
-### Test
-
-```powershell
-nslookup shaunmonwabisiteka.com
-```
 
 ### Resolution
 
