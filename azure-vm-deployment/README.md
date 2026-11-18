@@ -120,7 +120,7 @@ Network Security Group
 
 > ⚠️ Direct internet exposure of RDP should be tightly controlled in production environments.
 
-[⬆️ Back to Project Navigation](#-project-navigation)
+[⬆️ Back to Project Navigation](#project-navigation)
 
 ---
 
