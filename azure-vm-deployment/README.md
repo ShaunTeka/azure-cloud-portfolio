@@ -121,7 +121,6 @@ Network Security Group
 > ⚠️ Direct internet exposure of RDP should be tightly controlled in production environments.
 
 [⬆️ Back to Project Navigation](#project-navigation)
-
 ---
 
 ## Azure Services and Technologies
@@ -146,6 +145,7 @@ Network Security Group
 
 `Trusted Launch`
 
+[⬆️ Back to Project Navigation](#project-navigation)
 ---
 
 ## Lab Configuration
@@ -166,6 +166,7 @@ Network Security Group
 
 > **Note:** The Azure Portal displayed an estimated cost of `$42.34/month` at the time the VM size was selected. Azure prices can vary according to region, usage, operating system, licensing, currency, and changes to Microsoft pricing.
 
+[⬆️ Back to Project Navigation](#project-navigation)
 ---
 
 # Implementation and Demonstration
@@ -569,29 +570,4 @@ After completing the lab, I stopped the Virtual Machine from the Azure Portal an
 ```text
 Stopped (deallocated)
 ```
-
-### Lesson Learned
-
-Azure resources should be monitored and managed actively. Lab resources should be stopped, deallocated, or removed when they are no longer required.
-
----
-
-# What I Learned
-
-Through this project, I gained practical experience with:
-
-- Navigating the Microsoft Azure Portal
-- Creating an Azure Resource Group
-- Configuring an Azure Virtual Machine
-- Selecting a Windows Server image
-- Selecting an Azure VM size
-- Using Trusted Launch security
-- Configuring administrator credentials
-- Understanding Network Security Groups
-- Configuring RDP access on TCP port 3389
-- Deploying Azure infrastructure
-- Connecting to a Windows Server using Remote Desktop
-- Using Windows Server Manager
-- Stopping and deallocating an Azure VM
-- Reviewing Resource Group deletion
-- Protecting sensitive information in public documentation
+[⬆️ Back to Project Navigation](#project-navigation)
