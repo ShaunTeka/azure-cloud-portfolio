@@ -226,7 +226,7 @@ The Active Directory PowerShell module was successfully imported.
 
 ### OU Automation
 
-PowerShell was used to create the parent Company OU and departmental OUs.
+PowerShell was used to create the parent Company OU and departmental OUs. 
 
 ![OU Creation](screenshots/04-parent-ou-creation.png)
 
