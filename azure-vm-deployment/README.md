@@ -63,19 +63,16 @@ The objectives of this lab were to:
 
 ## Project Navigation
 
-- #-solution-architecture
-- #-azure-services--technologies
-- #️-lab-configuration
-- #-virtual-machine-deployment
-- #-remote-access--administration
-- #️-windows-server-administration
-- #️-vm-deallocation--cost-management
-- #️-azure-resource-cleanup
-- #-security-considerations
-- #-challenges--troubleshooting
-- #-skills-demonstrated
-- #-project-outcome
-
+- [Solution Architecture](#solution-architecture)
+- [Azure Services and Technologies](#azure-services-and-technologies)
+- [Lab Configuration](#lab-configuration)
+- [Implementation and Demonstration](#implementation-and-demonstration)
+- [Connecting to the Virtual Machine](#connecting-to-the-virtual-machine)
+- [Exploring Windows Server 2025](#exploring-windows-server-2025)
+- [Stopping and Deallocating the VM](#stopping-and-deallocating-the-vm)
+- [Removing the Azure Resources](#removing-the-azure-resources)
+- [Challenges and Troubleshooting](#challenges-and-troubleshooting)
+  
 ---
 
 # Solution Architecture
@@ -319,7 +316,7 @@ After Azure confirmed that the deployment was complete, I selected **Go to resou
 
 ---
 
-# 🔌 Connecting to the Virtual Machine
+# Connecting to the Virtual Machine
 
 ## 10. Open the VM Overview Page
 
@@ -491,7 +488,7 @@ This confirmed that the VM's compute resources had been deallocated.
 
 ---
 
-# 🗑️ Removing the Azure Resources
+# Removing the Azure Resources
 
 ## 22. Open the Resource Group
 
@@ -541,7 +538,7 @@ The **Delete** option should only be selected after confirming that the Virtual 
 
 ---
 
-# 🔧 Challenges and Troubleshooting
+# Challenges and Troubleshooting
 
 ## Remote Desktop Certificate Warning
 
