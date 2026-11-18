@@ -140,7 +140,7 @@ The configuration confirmed that:
 - A Network Security Group was associated with the network interface.
 - Remote Desktop connectivity was available for administration.
 
-![SMT-CLIENT01 Azure network settings](./screenshots/client-domain-join/02-client-network-settings.png)
+![SMT-CLIENT01 Azure network settings](./screenshots/02-client-network-settings.png)
 
 Proper network connectivity is required because the client must communicate with the domain controller for DNS, authentication, LDAP, Kerberos, and Group Policy services.
 
@@ -152,7 +152,7 @@ Proper network connectivity is required because the client must communicate with
 
 The Azure network interface IP configuration was reviewed to confirm the client VM's private addressing and subnet placement.
 
-![SMT-CLIENT01 Azure IP configuration](./screenshots/client-domain-join/03-client-ip-configuration.png)
+![SMT-CLIENT01 Azure IP configuration](./screenshots/03-client-ip-configuration.png)
 
 The client and domain controller were placed within the Azure private network so that domain-related communication could occur through private IP connectivity.
 
@@ -170,7 +170,7 @@ The following PowerShell command was executed on **SMT-CLIENT01**:
 ipconfig /all
 ```
 
-![Client IP and DNS validation](./screenshots/client-domain-join/04-ipconfig-dns-validation.png)
+![Client IP and DNS validation](./screenshots/04-ipconfig-dns-validation.png)
 
 The command output confirmed the following important settings:
 
@@ -198,7 +198,7 @@ The Active Directory domain name was tested using `nslookup`.
 nslookup shaunmonwabisiteka.com
 ```
 
-![Active Directory domain DNS lookup](./screenshots/client-domain-join/05-nslookup-domain.png)
+![Active Directory domain DNS lookup](./screenshots/05-nslookup-domain.png)
 
 The lookup successfully returned:
 
@@ -230,7 +230,7 @@ The following command was executed:
 nltest /dsgetdc:shaunmonwabisiteka.com
 ```
 
-![Domain controller discovery validation](./screenshots/client-domain-join/06-domain-controller-discovery.png)
+![Domain controller discovery validation](./screenshots/06-domain-controller-discovery.png)
 
 The command returned the following information:
 
@@ -281,7 +281,7 @@ shaunmonwabisiteka.com
 
 Authorized domain credentials were then supplied to approve the domain-join request.
 
-![Active Directory domain join authentication](./screenshots/client-domain-join/07-domain-join-authentication.png)
+![Active Directory domain join authentication](./screenshots/07-domain-join-authentication.png)
 
 The authentication step confirms that the account being used has permission to add the computer to the domain.
 
@@ -300,7 +300,7 @@ After the credentials were accepted, Windows displayed the following confirmatio
 Welcome to the shaunmonwabisiteka.com domain.
 ```
 
-![Successful Active Directory domain join](./screenshots/client-domain-join/08-successful-domain-join.png)
+![Successful Active Directory domain join](./screenshots/08-successful-domain-join.png)
 
 This message provides direct evidence that the domain controller accepted the client as a member of the Active Directory domain.
 
@@ -312,7 +312,7 @@ This message provides direct evidence that the domain controller accepted the cl
 
 Windows indicated that the client computer needed to be restarted to complete the domain membership process.
 
-![Domain join restart requirement](./screenshots/client-domain-join/09-domain-join-restart-required.png)
+![Domain join restart requirement](./screenshots/09-domain-join-restart-required.png)
 
 A restart is required because Windows must initialize the new computer-domain trust relationship and load the updated domain membership configuration.
 
@@ -324,7 +324,7 @@ A restart is required because Windows must initialize the new computer-domain tr
 
 The **Restart Now** option was selected to apply the domain membership changes.
 
-![Restarting the Windows client](./screenshots/client-domain-join/10-restart-client.png)
+![Restarting the Windows client](./screenshots/10-restart-client.png)
 
 After restarting, the computer transitioned from a standalone workgroup computer into an Active Directory domain member.
 
@@ -347,7 +347,7 @@ Settings
         └── Device specifications
 ```
 
-![Windows client domain membership verification](./screenshots/client-domain-join/11-client-domain-membership.png)
+![Windows client domain membership verification](./screenshots/11-client-domain-membership.png)
 
 The system displayed the following full device name:
 
@@ -365,7 +365,7 @@ The fully qualified domain name confirms that the Windows client is associated w
 
 The final verification was completed on the domain controller using **Active Directory Users and Computers**.
 
-![SMT-CLIENT01 computer object in Active Directory](./screenshots/client-domain-join/12-ad-computer-object.png)
+![SMT-CLIENT01 computer object in Active Directory](./screenshots/12-ad-computer-object.png)
 
 An Active Directory computer object named the following was visible:
 
