@@ -113,9 +113,6 @@ The server provides the infrastructure on which Active Directory Domain Services
 
 ### Screenshot
 ![Server Manager Local Server](./screenshots/active-directory-setup/01-server-manager-local-server.png)
-```text
-screenshots/active-directory-setup/01-server-manager-local-server.png
-```
 
 ---
 
