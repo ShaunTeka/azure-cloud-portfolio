@@ -308,14 +308,6 @@ The project can be extended with:
 
 ---
 
-## Security Note
-
-All credentials, passwords, private keys and sensitive infrastructure information should be excluded from this repository.
-
-Any CSV datasets included in the repository should contain **sample or anonymised user information only**.
-
----
-
 ## Key Takeaway
 
 > **Automation is not simply about replacing manual commands. It is about building repeatable, controlled and scalable administrative processes.**
