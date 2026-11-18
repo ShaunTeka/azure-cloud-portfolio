@@ -111,8 +111,8 @@ WS22-SMTVM01
 
 The server provides the infrastructure on which Active Directory Domain Services is deployed.
 
-### Screenshot
-![Server Manager Local Server](./screenshots/active-directory-setup/01-server-manager-local-server.png)
+### Screenshot:
+![Server Manager Local Server](./screenshots/01-server-manager-local-server.png)
 
 ---
 
@@ -122,8 +122,8 @@ From **Server Manager**, the **Add Roles and Features** wizard was launched.
 
 This wizard allows additional Windows Server roles and management components to be installed.
 
-### Screenshot
-![Add Roles Features](./screenshots/active-directory-setup/02-add-roles-features.png)
+### Screenshot:
+![Add Roles Features](./screenshots/02-add-roles-features.png)
 
 ---
 
@@ -144,8 +144,8 @@ AD DS provides the directory infrastructure required to centrally manage:
 - Organizational Units
 - Group Policy
 
-### Screenshot
-![AD DS Roles](./screenshots/active-directory-setup/03-select-ad-ds-role.png)
+### Screenshot:
+![AD DS Roles](./screenshots/03-select-ad-ds-role.png)
 
 ---
 
@@ -164,11 +164,8 @@ These included:
 
 These tools provide both graphical and command-line administration capabilities.
 
-### Screenshot
-![AD DS Management Tools](./screenshots/active-directory-setup/04-ad-ds-management-tools.png)
-```text
-screenshots/active-directory-setup/04-ad-ds-management-tools.png
-```
+### Screenshot:
+![AD DS Management Tools](./screenshots/04-ad-ds-management-tools.png)
 
 ---
 
@@ -185,8 +182,8 @@ The required Windows Server features were reviewed before installation.
 - Security baselines
 - Centralized Windows configuration
 
-### Screenshot
-![Windows Feature](./screenshots/active-directory-setup/05-windows-features.png)
+### Screenshot:
+![Windows Feature](./screenshots/05-windows-features.png)
 
 ---
 
@@ -196,8 +193,8 @@ The AD DS information screen was reviewed before proceeding.
 
 Active Directory provides a centralized directory that allows administrators to securely manage identities, computers, authentication, and access to domain resources.
 
-### Screenshot
-![AD DS Overview](./screenshots/active-directory-setup/06-ad-ds-overview.png)
+### Screenshot:
+![AD DS Overview](./screenshots/06-ad-ds-overview.png)
 
 ---
 
@@ -224,8 +221,8 @@ Active Directory Domain Services
 
 Automatic server restart was permitted if required.
 
-### Screenshot
-![Confirm Installation](./screenshots/active-directory-setup/07-confirm-installation.png)
+### Screenshot:
+![Confirm Installation](./screenshots/07-confirm-installation.png)
 
 ---
 
@@ -243,8 +240,8 @@ Windows Server reported:
 
 Installing AD DS adds the required components, but the server must still be **promoted to a Domain Controller** before it can provide domain services.
 
-### Screenshot
-![Installation Complete](./screenshots/active-directory-setup/08-ad-ds-installation-complete.png)
+### Screenshot:
+![Installation Complete](./screenshots/08-ad-ds-installation-complete.png)
 
 ---
 
@@ -260,8 +257,8 @@ Promote this server to a domain controller
 
 Promotion converts the Windows Server from a system containing the AD DS role into an operational **Domain Controller**.
 
-### Screenshot
-![Promote Domain Controller](./screenshots/active-directory-setup/09-promote-domain-controller.png)
+### Screenshot:
+![Promote Domain Controller](./screenshots/09-promote-domain-controller.png)
 
 ---
 
@@ -281,8 +278,8 @@ shaunmonwabisiteka.com
 
 The forest establishes the top-level Active Directory structure within which domains, users, computers, groups, Organizational Units, and Group Policies can be managed.
 
-### Screenshot
-![Create New Forest](./screenshots/active-directory-setup/10-create-new-forest.png)
+### Screenshot:
+![Create New Forest](./screenshots/10-create-new-forest.png)
 
 ---
 
@@ -302,8 +299,8 @@ Properties
 
 Network configuration is especially important for Domain Controllers because Active Directory relies heavily on **DNS and reliable IP connectivity**.
 
-### Screenshot
-![Network Adapter Review](./screenshots/active-directory-setup/11-network-adapter-review.png)
+### Screenshot:
+![Network Adapter Review](./screenshots/11-network-adapter-review.png)
 
 > ⚠️ **Lab Observation:** The environment later reported that the IPv4 address was being assigned dynamically. For a production Domain Controller hosted in Azure, predictable private IP addressing should be maintained through the Azure Network Interface configuration.
 
@@ -344,8 +341,8 @@ Directory Services Restore Mode provides a recovery mechanism for Active Directo
 
 Passwords, DSRM credentials, administrator credentials, recovery secrets, and similar sensitive information should **never be committed to a public GitHub repository**.
 
-### Screenshot
-![Domain Controller Options](./screenshots/active-directory-setup/12-domain-controller-options.png)
+### Screenshot:
+![Domain Controller Options](./screenshots/12-domain-controller-options.png)
 
 ---
 
@@ -357,8 +354,8 @@ For this standalone lab forest, DNS delegation was not created during the deploy
 
 The Domain Controller itself was configured with the DNS Server role.
 
-### Screenshot
-![DNS Options](./screenshots/active-directory-setup/13-dns-options.png)
+### Screenshot:
+![DNS Options](./screenshots/13-dns-options.png)
 
 > 💡 The warning did not prevent the deployment. The later prerequisites validation confirmed that the required checks passed successfully.
 
@@ -376,8 +373,8 @@ SHAUNMONWABISIT
 
 The NetBIOS name provides a shortened representation of the domain for Windows operations and compatibility scenarios.
 
-### Screenshot
-![Netbios Domain Name](./screenshots/active-directory-setup/14-netbios-domain-name.png)
+### Screenshot:
+![Netbios Domain Name](./screenshots/14-netbios-domain-name.png)
 
 ---
 
@@ -408,8 +405,8 @@ Stores the Active Directory database and associated information.
 
 Stores domain-wide files required by Active Directory, including Group Policy-related content.
 
-### Screenshot
-![AD DS Database Paths](./screenshots/active-directory-setup/14-netbios-domain-name.png)
+### Screenshot:
+![AD DS Database Paths](./screenshots/14-netbios-domain-name.png)
 
 ---
 
@@ -452,8 +449,8 @@ No
 
 Reviewing the configuration before deployment helps prevent incorrect forest, domain, DNS, and functional-level configurations.
 
-### Screenshot
-![Review Domain Options](./screenshots/active-directory-setup/16-review-domain-options.png)
+### Screenshot:
+![Review Domain Options](./screenshots/16-review-domain-options.png)
 
 ---
 
@@ -471,8 +468,8 @@ The server was therefore ready for installation and Domain Controller promotion.
 
 The wizard also indicated that the system would automatically restart after completing the promotion.
 
-### Screenshot
-![Prerequisites](./screenshots/active-directory-setup/17-prerequisites-check.png)
+### Screenshot:
+![Prerequisites](./screenshots/17-prerequisites-check.png)
 
 ### Infrastructure Observation
 
@@ -505,8 +502,8 @@ Group Policy Management
 
 This verified that the required administrative components were available for managing the new environment.
 
-### Screenshot
-![Active Directory Admin Tools](./screenshots/active-directory-setup/18-active-directory-admin-tools.png)
+### Screenshot:
+![Active Directory Admin Tools](./screenshots/18-active-directory-admin-tools.png)
 
 ---
 
@@ -533,8 +530,8 @@ DNS
 
 This provides post-deployment evidence that the server is operating within the newly established Active Directory environment.
 
-### Screenshot
-![Domain Verification](./screenshots/active-directory-setup/19-domain-verification.png)
+### Screenshot:
+![Domain Verification](./screenshots/19-domain-verification.png)
 
 
 ---
@@ -549,8 +546,8 @@ shaunmonwabisiteka.com
 
 Together with Server Manager, AD DS, DNS, and the available administrative tools, this provides additional validation of the completed domain environment.
 
-### Screenshot
-![Domain Network Verification](./screenshots/active-directory-setup/20-domain-network-verification.png)
+### Screenshot:
+![Domain Network Verification](./screenshots/20-domain-network-verification.png)
 
 ---
 
@@ -560,27 +557,21 @@ The Windows Server VM was successfully transformed from a standalone server into
 
 ### Deployment completed
 
-- ✅ Active Directory Domain Services installed
-- ✅ Active Directory management tools installed
-- ✅ New Active Directory forest established
-- ✅ Root domain created
-- ✅ Domain Controller configured
-- ✅ DNS Server enabled
-- ✅ Global Catalog enabled
-- ✅ DSRM configured
-- ✅ NetBIOS domain name established
-- ✅ AD DS database and SYSVOL locations configured
-- ✅ Prerequisite checks passed
-- ✅ Active Directory administration tools verified
-- ✅ Domain configuration verified
-- ✅ Network domain association verified
+- [x] Active Directory Domain Services installed
+- [x] Active Directory management tools installed
+- [x] New Active Directory forest established
+- [x] Root domain created
+- [x] Domain Controller configured
+- [x] DNS Server enabled
+- [x] Global Catalog enabled
+- [x] DSRM configured
+- [x] NetBIOS domain name established
+- [x] AD DS database and SYSVOL locations configured
+- [x] Prerequisite checks passed
+- [x] Active Directory administration tools verified
+- [x] Domain configuration verified
+- [x] Network domain association verified
 
 ---
-
-## 👤 Author
-
-**Shaun Teka**
-
-Cloud • Infrastructure • Identity • Security
 
 > This project forms part of my hands-on cloud infrastructure and cybersecurity portfolio, demonstrating practical experience with Microsoft Azure, Windows Server, Active Directory, networking, identity management, and enterprise security administration.
